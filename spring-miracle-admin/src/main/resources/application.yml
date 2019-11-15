@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: gds
+  application:
+    name: spring-miracle-admin
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

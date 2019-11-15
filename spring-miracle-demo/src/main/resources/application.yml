@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: spring-miracle-demo
+  boot:
+      admin:
+        client:
+          url: "http://127.0.0.1:8763"
+          password: 123456
+          username: fuhw
+          instance:
+            prefer-ip: true
+
+info:
+  version: @project.version@
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@

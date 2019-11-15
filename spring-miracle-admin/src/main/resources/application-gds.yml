@@ -1,0 +1,22 @@
+server:
+  port: 8763
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+        "user.name": ${spring.security.user.name}
+        "user.password": ${spring.security.user.password}
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone:  http://127.0.0.1:8762/eureka/,http://127.0.0.1:8761/eureka/
+
+
+spring:
+  security:
+    user:
+      name: fuhw
+      password: 123456
