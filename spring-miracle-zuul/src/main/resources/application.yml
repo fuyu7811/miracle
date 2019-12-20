@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: spring-miracle-demo
+    name: spring-miracle-zuul
   boot:
       admin:
         client:

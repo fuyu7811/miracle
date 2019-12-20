@@ -1,0 +1,26 @@
+server:
+  port: 8764
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 10
+    health-check-url-path: /actuator/health
+#    hostname: ${spring.cloud.client.ipAddress}
+#    ip-address: true
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:8762/eureka/,http://127.0.0.1:8761/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
