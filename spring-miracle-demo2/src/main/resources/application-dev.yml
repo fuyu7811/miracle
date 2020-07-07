@@ -29,3 +29,55 @@ spring:
     user:
       name: fuhw
       password: 123456
+  datasource:
+    hikari:
+      auto-commit: true
+      maximum-pool-size: 10
+      minimum-idle: 2
+      max-lifetime: 180000
+      idle-timeout: 300000
+      connection-test-query: SELECT 1
+      connection-timeout: 20000
+  redis:
+    #单个redis配置host和prot
+    #host: 192.168.74.83
+    #port: 6379
+    #password:
+    timeout: 6000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    #sentinel哨兵配置
+    sentinel:
+      master: mymaster
+      nodes: 127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381
+#多数据源配置
+db:
+  datasource:
+    #主数据库 master库
+    master:
+      jdbc-url: jdbc:mysql://192.168.33.76:3306/database1?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+      username: master
+      password: pass1
+    # 从库数据源 slave库
+    slave:
+      jdbc-url: jdbc:mysql://192.168.33.76:3306/database2?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+      username: slave
+      password: pass2
+
+#mybatis
+mybatis-plus:
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 1
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
