@@ -11,7 +11,9 @@ import java.lang.annotation.*;
  * @author fuhw
  * @date 2019/12/10 9:58
  * @ClassName MQConsumeService
- * @Description
+ * @Description 消息主题
+ * <p>
+ * 消息标签,如果是该主题下所有的标签，使用“*”
  *//*
 
 @Documented
@@ -21,15 +23,15 @@ import java.lang.annotation.*;
 public @interface MQConsumeService {
    */
 /**
-    * 消息主题
-    *//*
+ * 消息主题
+ *//*
 
    TopicEnum topic();
 
    */
 /**
-    * 消息标签,如果是该主题下所有的标签，使用“*”
-    *//*
+ * 消息标签,如果是该主题下所有的标签，使用“*”
+ *//*
 
    String[] tags();
 }

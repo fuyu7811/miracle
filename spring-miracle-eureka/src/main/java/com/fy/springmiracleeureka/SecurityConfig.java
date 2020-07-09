@@ -18,9 +18,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     */
 /**
-     * 配置一个userDetailsService Bean不在生成默认security.user用户
-     * @return
-     *//*
+ * 配置一个userDetailsService Bean不在生成默认security.user用户
+ *
+ * @return
+ *//*
 
     @Bean
     @Override

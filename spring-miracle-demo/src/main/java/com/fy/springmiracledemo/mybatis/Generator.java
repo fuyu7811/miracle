@@ -19,6 +19,22 @@ import java.util.Map;
 */
 /**
  * mybatis反向工程
+ * <p>
+ * 获取项目路径
+ * <p>
+ * 数据库配置
+ * <p>
+ * 全局配置
+ * <p>
+ * 策略配置
+ * <p>
+ * 包配置
+ * <p>
+ * 注入自定义配置
+ * <p>
+ * 指定模板引擎 默认是VelocityTemplateEngine ，需要引入相关引擎依赖
+ * <p>
+ * 模板配置
  *//*
 
 public class Generator {
@@ -50,8 +66,8 @@ public class Generator {
 
         */
 /**
-         * 获取项目路径
-         *//*
+ * 获取项目路径
+ *//*
 
         try {
             canonicalPath = new File("").getCanonicalPath();
@@ -61,8 +77,8 @@ public class Generator {
 
         */
 /**
-         * 数据库配置
-         *//*
+ * 数据库配置
+ *//*
 
         gen.setDataSource(new DataSourceConfig()
                 .setDbType(dbType)
@@ -84,8 +100,8 @@ public class Generator {
 
         */
 /**
-         * 全局配置
-         *//*
+ * 全局配置
+ *//*
 
         gen.setGlobalConfig(new GlobalConfig()
                         .setOutputDir(canonicalPath + "/src/test/java")//输出目录
@@ -106,8 +122,8 @@ public class Generator {
 
         */
 /**
-         * 策略配置
-         *//*
+ * 策略配置
+ *//*
 
         gen.setStrategy(new StrategyConfig()
                         // .setCapitalMode(true)// 全局大写命名
@@ -146,8 +162,8 @@ public class Generator {
 
         */
 /**
-         * 包配置
-         *//*
+ * 包配置
+ *//*
 
         gen.setPackageInfo(new PackageConfig()
                         //.setModuleName("User")
@@ -162,8 +178,8 @@ public class Generator {
 
         */
 /**
-         * 注入自定义配置
-         *//*
+ * 注入自定义配置
+ *//*
 
         // 注入自定义配置，可以在 VM 中使用 cfg.abc 设置的值
         InjectionConfig abc = new InjectionConfig() {
@@ -187,15 +203,15 @@ public class Generator {
 
         */
 /**
-         * 指定模板引擎 默认是VelocityTemplateEngine ，需要引入相关引擎依赖
-         *//*
+ * 指定模板引擎 默认是VelocityTemplateEngine ，需要引入相关引擎依赖
+ *//*
 
         //gen.setTemplateEngine(new FreemarkerTemplateEngine());
 
         */
 /**
-         * 模板配置
-         *//*
+ * 模板配置
+ *//*
 
         gen.setTemplate(
                 // 关闭默认 xml 生成，调整生成 至 根目录

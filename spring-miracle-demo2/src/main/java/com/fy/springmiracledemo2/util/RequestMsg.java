@@ -3,13 +3,13 @@ package com.fy.springmiracledemo2.util;
 import com.alibaba.fastjson.JSONObject;
 
 /**
- * @Description   :  java类作用描述
- * @author        :  fuhw
- * @CreateDate    :  2020/7/7 16:16
- * @UpdateUser    :  fuhw
- * @UpdateDate    :  2020/7/7 16:16
- * @UpdateRemark  :  修改内容
- * @Version       :  1.0
+ * @author :  fuhw
+ * @Description :  java类作用描述
+ * @CreateDate :  2020/7/7 16:16
+ * @UpdateUser :  fuhw
+ * @UpdateDate :  2020/7/7 16:16
+ * @UpdateRemark :  修改内容
+ * @Version :  1.0
  */
 public class RequestMsg {
 

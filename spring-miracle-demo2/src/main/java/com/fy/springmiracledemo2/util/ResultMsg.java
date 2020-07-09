@@ -1,13 +1,13 @@
 package com.fy.springmiracledemo2.util;
 
 /**
- * @Description   :  java类作用描述
- * @author        :  fuhw
- * @CreateDate    :  2020/7/7 16:15
- * @UpdateUser    :  fuhw
- * @UpdateDate    :  2020/7/7 16:15
- * @UpdateRemark  :  修改内容
- * @Version       :  1.0
+ * @author :  fuhw
+ * @Description :  java类作用描述
+ * @CreateDate :  2020/7/7 16:15
+ * @UpdateUser :  fuhw
+ * @UpdateDate :  2020/7/7 16:15
+ * @UpdateRemark :  修改内容
+ * @Version :  1.0
  */
 public class ResultMsg {
     /**
@@ -22,12 +22,12 @@ public class ResultMsg {
 
     private Object data;
 
-    public ResultMsg(){
+    public ResultMsg() {
 
     }
 
-    ResultMsg(int code, String msg){
-        this.statusCode =code;
+    ResultMsg(int code, String msg) {
+        this.statusCode = code;
         this.message = msg;
     }
 
@@ -47,12 +47,12 @@ public class ResultMsg {
         this.message = message;
     }
 
-    public static ResultMsg ok(){
-        return new ResultMsg(0,"success");
+    public static ResultMsg ok() {
+        return new ResultMsg(0, "success");
     }
 
-    public static ResultMsg error(int code,String msg){
-        return new ResultMsg(code,msg);
+    public static ResultMsg error(int code, String msg) {
+        return new ResultMsg(code, msg);
     }
 
     public Object getData() {

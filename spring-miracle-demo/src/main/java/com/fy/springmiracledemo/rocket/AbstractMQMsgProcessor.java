@@ -13,7 +13,12 @@ import java.util.List;
  * @author fuhw
  * @date 2019/12/10 10:03
  * @ClassName AbstractMQMsgProcessor
- * @Description
+ * @Description 可以增加一些其他逻辑可以增加一些其他逻辑
+ * 消息某条消息
+ * @param tag 标签
+ * @param keys 消息关键字
+ * @param messageExt
+ * @return 2018年3月1日 zhaowg
  *//*
 
 @Slf4j
@@ -39,13 +44,13 @@ public abstract class AbstractMQMsgProcessor implements MQMsgProcessor {
 
    */
 /**
-    * 消息某条消息
-    * @param tag 标签
-    * @param keys 消息关键字
-    * @param messageExt
-    * @return
-    * 2018年3月1日 zhaowg
-    *//*
+ * 消息某条消息
+ * @param tag 标签
+ * @param keys 消息关键字
+ * @param messageExt
+ * @return
+ * 2018年3月1日 zhaowg
+ *//*
 
    protected abstract MQConsumeResult consumeMessage(String tag,List<String> keys, MessageExt messageExt);
 }

@@ -12,20 +12,23 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 /**
- * @Description   :  java类作用描述
- * @author        :  fuhw
- * @CreateDate    :  2020/7/7 16:16
- * @UpdateUser    :  fuhw
- * @UpdateDate    :  2020/7/7 16:16
- * @UpdateRemark  :  修改内容
- * @Version       :  1.0
+ * @author :  fuhw
+ * @Description :  java类作用描述
+ * @CreateDate :  2020/7/7 16:16
+ * @UpdateUser :  fuhw
+ * @UpdateDate :  2020/7/7 16:16
+ * @UpdateRemark :  修改内容
+ * @Version :  1.0
  */
 @Configuration
-@MapperScan(basePackages = "com.fy.springmiracledemo2.mapper.salve",sqlSessionFactoryRef = "slaveSqlSessionFactory")
+@MapperScan(basePackages = "com.fy.springmiracledemo2.mapper.salve", sqlSessionFactoryRef = "slaveSqlSessionFactory")
 public class SlaveDataSourceConfig {
-    @Bean(name = "slaveDataSource")
+
+
+    @Bean
+    @Qualifier("slaveDataSource")
     @ConfigurationProperties("db.datasource.slave")
-    public DataSource slaveDataSource(){
+    public DataSource slaveDataSource() {
         return DataSourceBuilder.create().build();
     }
 

@@ -20,9 +20,7 @@
         <oracle.version>11.2.0.4</oracle.version>
         <mybatis-plus.version>3.0.1</mybatis-plus.version>
         <lombok.version>1.18.2</lombok.version>
-<!--        <mybatisplus.boot.version>3.2.0</mybatisplus.boot.version>-->
-<!--        <druid.version>1.1.10</druid.version>-->
-<!--        <dynamic.datasource.boot.version>2.5.4</dynamic.datasource.boot.version>-->
+        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
     </properties>
 
     <dependencies>
@@ -66,11 +64,11 @@
             <artifactId>apollo-client</artifactId>
             <version>1.1.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.ctrip.framework.apollo</groupId>-->
-<!--            <artifactId>apollo-core</artifactId>-->
-<!--            <version>1.6.0-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.ctrip.framework.apollo</groupId>-->
+        <!--            <artifactId>apollo-core</artifactId>-->
+        <!--            <version>1.6.0-SNAPSHOT</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -116,6 +114,12 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
             <version>3.3.2</version>
+        </dependency>
+        <!--mysql 驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
 
     </dependencies>
